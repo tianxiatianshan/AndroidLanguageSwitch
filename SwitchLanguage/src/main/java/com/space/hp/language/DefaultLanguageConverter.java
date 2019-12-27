@@ -9,7 +9,7 @@ import java.util.Locale;
  * @date: 2019/12/27
  * @description:
  */
-public class DefaultLanguageConverter implements LanguageConverter {
+public class DefaultLanguageConverter implements LanguageStrLocaleConverter {
     @Override
     public Locale string2Locale(String language) {
         if (TextUtils.isEmpty(language)) {

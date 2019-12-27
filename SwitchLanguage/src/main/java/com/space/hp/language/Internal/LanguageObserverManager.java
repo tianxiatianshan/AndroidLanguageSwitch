@@ -16,7 +16,7 @@ import java.util.List;
 public class LanguageObserverManager {
 
     /**
-     * 虚引用
+     * 使用虚引用保存Activity或Fragment引用，防止内存泄漏
      */
     private List<WeakReference<LanguageObserver>> mObserverWeakRefs = new LinkedList<>();
 

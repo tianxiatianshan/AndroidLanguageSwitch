@@ -7,7 +7,7 @@ import java.util.Locale;
  * @date: 2019/12/27
  * @description:
  */
-public interface LanguageConverter {
+public interface LanguageStrLocaleConverter {
 
     Locale string2Locale(String language);
 

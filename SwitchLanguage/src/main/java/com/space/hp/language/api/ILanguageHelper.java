@@ -1,7 +1,7 @@
 package com.space.hp.language.api;
 
 import android.content.Context;
-import com.space.hp.language.LanguageConverter;
+import com.space.hp.language.LanguageStrLocaleConverter;
 import com.space.hp.language.LanguageObserver;
 
 /**
@@ -23,5 +23,5 @@ public interface ILanguageHelper {
 
     Context getLanguageContext(Context context);
 
-    void setLanguageConverter(LanguageConverter languageConverter);
+    void setLanguageConverter(LanguageStrLocaleConverter languageConverter);
 }

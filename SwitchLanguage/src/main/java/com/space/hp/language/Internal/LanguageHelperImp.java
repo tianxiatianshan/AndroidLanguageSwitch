@@ -2,7 +2,7 @@ package com.space.hp.language.Internal;
 
 import android.content.Context;
 import com.space.hp.language.DefaultLanguageConverter;
-import com.space.hp.language.LanguageConverter;
+import com.space.hp.language.LanguageStrLocaleConverter;
 import com.space.hp.language.LanguageObserver;
 import com.space.hp.language.api.ILanguageHelper;
 import com.space.hp.language.sp.SPManager;
@@ -20,7 +20,7 @@ public class LanguageHelperImp implements ILanguageHelper {
 
     public static final String TAG = "LanguageHelperImp--";
 
-    private LanguageConverter mLanguageConverter = new DefaultLanguageConverter();
+    private LanguageStrLocaleConverter mLanguageConverter = new DefaultLanguageConverter();
 
 
     @Override
@@ -72,7 +72,7 @@ public class LanguageHelperImp implements ILanguageHelper {
     }
 
     @Override
-    public void setLanguageConverter(LanguageConverter languageConverter) {
+    public void setLanguageConverter(LanguageStrLocaleConverter languageConverter) {
         mLanguageConverter = languageConverter;
     }
 }

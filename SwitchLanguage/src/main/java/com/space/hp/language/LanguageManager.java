@@ -62,7 +62,8 @@ public enum LanguageManager implements ILanguageManager {
     }
 
     @Override
-    public void setLanguageConverter(LanguageConverter languageConverter) {
+    @MainThread
+    public void setLanguageConverter(LanguageStrLocaleConverter languageConverter) {
         mLanguageHelper.setLanguageConverter(languageConverter);
     }
 
