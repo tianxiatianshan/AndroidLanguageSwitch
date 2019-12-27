@@ -1,6 +1,8 @@
 package com.space.hp.language.Internal;
 
 import android.content.Context;
+import com.space.hp.language.DefaultLanguageConverter;
+import com.space.hp.language.LanguageConverter;
 import com.space.hp.language.LanguageObserver;
 import com.space.hp.language.api.ILanguageHelper;
 import com.space.hp.language.sp.SPManager;
@@ -18,6 +20,9 @@ public class LanguageHelperImp implements ILanguageHelper {
 
     public static final String TAG = "LanguageHelperImp--";
 
+    private LanguageConverter mLanguageConverter = new DefaultLanguageConverter();
+
+
     @Override
     public void registerObserver(LanguageObserver observer) {
         LanguageObserverManager.getInstance().addObserver(observer);
@@ -33,7 +38,7 @@ public class LanguageHelperImp implements ILanguageHelper {
         LogUtil.d(TAG, "setLanguage:  " + language);
         SPManager.setLanguage(context, language);
         SPManager.setIsSetLanguage(context, true);
-        Context configContext = LanguageUtil.wrapperConfigContext(context, LanguageUtil.getLocaleFromLanguageStr(language));
+        Context configContext = LanguageUtil.wrapperConfigContext(context, mLanguageConverter.string2Locale(language));
         LanguageObserverManager.getInstance().noticeLanguageObserver(configContext);
     }
 
@@ -44,7 +49,7 @@ public class LanguageHelperImp implements ILanguageHelper {
             currentLanguage = SPManager.getLanguage(context);
         } else {
             Locale systemLocale = LanguageUtil.getSystemLocale();
-            currentLanguage = LanguageUtil.getStringFormLocale(systemLocale);
+            currentLanguage = mLanguageConverter.locale2String(systemLocale);
         }
         return currentLanguage;
     }
@@ -58,11 +63,16 @@ public class LanguageHelperImp implements ILanguageHelper {
     public Context getLanguageContext(Context context) {
         Locale locale;
         if (SPManager.getIsSetLanguage(context)) {
-            locale = LanguageUtil.getLocaleFromLanguageStr(SPManager.getLanguage(context));
+            locale = mLanguageConverter.string2Locale(SPManager.getLanguage(context));
         } else {
             locale = LanguageUtil.getSystemLocale();
         }
 
         return LanguageUtil.wrapperConfigContext(context, locale);
+    }
+
+    @Override
+    public void setLanguageConverter(LanguageConverter languageConverter) {
+        mLanguageConverter = languageConverter;
     }
 }
