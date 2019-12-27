@@ -16,6 +16,8 @@ public interface ILanguageHelper {
 
     void setLanguage(Context context, String language);
 
+    String getCurrentLanguage(Context context);
+
     void setAutoLanguage(Context context);
 
     Context getLanguageContext(Context context);

@@ -45,6 +45,11 @@ public enum LanguageManager implements ILanguageManager {
     }
 
     @Override
+    public String getCurrentLanguage(Context context) {
+        return mLanguageHelper.getCurrentLanguage(context);
+    }
+
+    @Override
     @MainThread
     public void setAutoLanguage(Context context) {
         mLanguageHelper.setAutoLanguage(context);

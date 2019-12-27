@@ -27,6 +27,18 @@ public class LanguageUtil {
         return new Locale(split[0]);
     }
 
+    public static String getStringFormLocale(Locale locale) {
+        if (locale == null) {
+            locale = Locale.ENGLISH;
+        }
+        String language = locale.getLanguage();
+        String country = locale.getCountry();
+        if (TextUtils.isEmpty(country)) {
+            return language;
+        }
+        return language + "-" + country;
+    }
+
     public static Context wrapperConfigContext(Context context, Locale locale) {
         if (locale == null || context == null) {
             return context;

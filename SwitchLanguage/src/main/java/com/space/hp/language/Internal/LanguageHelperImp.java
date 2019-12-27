@@ -38,6 +38,18 @@ public class LanguageHelperImp implements ILanguageHelper {
     }
 
     @Override
+    public String getCurrentLanguage(Context context) {
+        String currentLanguage;
+        if (SPManager.getIsSetLanguage(context)) {
+            currentLanguage = SPManager.getLanguage(context);
+        } else {
+            Locale systemLocale = LanguageUtil.getSystemLocale();
+            currentLanguage = LanguageUtil.getStringFormLocale(systemLocale);
+        }
+        return currentLanguage;
+    }
+
+    @Override
     public void setAutoLanguage(Context context) {
         SPManager.setIsSetLanguage(context, false);
     }
