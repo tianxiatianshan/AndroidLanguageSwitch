@@ -43,14 +43,6 @@
     }
 ```
 # 接口
-//注册语言变化监听
-```
-LanguageManager.INSTANCE.registerObserver(LanguageObserver observer);
-```
-//取消注册语言变化监听
-```
-LanguageManager.INSTANCE.unRegisterObserver(LanguageObserver observer);
-```
 //设置语言: 语言码为：An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. See the Locale class description about valid language values.
 ```    
 LanguageManager.INSTANCE.setLanguage(Context context, String language);
