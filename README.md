@@ -40,22 +40,22 @@
 
 # 接口
 //注册语言变化监听
-LanguageManager.INSTANCE.registerObserver(LanguageObserver observer);
+ LanguageManager.INSTANCE.registerObserver(LanguageObserver observer);
 
 //取消注册语言变化监听
-LanguageManager.INSTANCE.unRegisterObserver(LanguageObserver observer);
+ LanguageManager.INSTANCE.unRegisterObserver(LanguageObserver observer);
 
 //设置语言: 语言码为：An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. See the Locale class description about valid language values.
-LanguageManager.INSTANCE.setLanguage(Context context, String language);
+ LanguageManager.INSTANCE.setLanguage(Context context, String language);
 
 //自定义语言码和Locale转换关系（高级）
-LanguageManager.INSTANCE.setLanguageConverter(LanguageStrLocaleConverter languageConverter)
+ LanguageManager.INSTANCE.setLanguageConverter(LanguageStrLocaleConverter languageConverter)
 
 //获取当前多语言
-LanguageManager.INSTANCE.getCurrentLanguage(Context context);
+ LanguageManager.INSTANCE.getCurrentLanguage(Context context);
 
 //设置自动多语言（跟随系统多语言）
-LanguageManager.INSTANCE.setAutoLanguage(Context context);
+ LanguageManager.INSTANCE.setAutoLanguage(Context context);
 
 
 
