@@ -35,7 +35,7 @@
     }
  ```
 
-2.  实现onLanguageChanged， 更新页面语言显示
+2.  实现onLanguageChanged， 更新页面语言显示 （在设置语言后，会立即回调该接口）
 ```
     @Override
     public void onLanguageChanged(Context context) {
