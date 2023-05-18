@@ -27,7 +27,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    api project(':SwitchLanguage')
+//    api project(':SwitchLanguage')
+
+    implementation 'com.github.tianxiatianshan:AndroidLanguageSwitch:v0.0.1'
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
