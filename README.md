@@ -6,6 +6,10 @@
 * 不改变多语言的存放方式，和系统一致在res下
 * 不设置语言时，自动跟随系统语言
 
+# 效果预览
+
+ ![image](https://github.com/tianxiatianshan/AndroidLanguageSwitch/blob/master/%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88.gif)
+
 # 使用方法
  
  [![](https://jitpack.io/v/tianxiatianshan/AndroidLanguageSwitch.svg)](https://jitpack.io/#tianxiatianshan/AndroidLanguageSwitch)
