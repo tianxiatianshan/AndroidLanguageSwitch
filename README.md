@@ -43,19 +43,20 @@
     }
 ```
 # 接口
-//设置语言: 语言码为：An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. See the Locale class description about valid language values.
+### 1. 设置语言: 
+语言码为：An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. See the Locale class description about valid language values.
 ```    
 LanguageManager.INSTANCE.setLanguage(Context context, String language);
 ```
-//自定义语言码和Locale转换关系（高级）
+### 2. 自定义语言码和Locale转换关系（高级）
 ```
 LanguageManager.INSTANCE.setLanguageConverter(LanguageStrLocaleConverter languageConverter)
 ```
-//获取当前多语言
+### 3. 获取当前多语言
 ```
 LanguageManager.INSTANCE.getCurrentLanguage(Context context);
 ```
-//设置自动多语言（跟随系统多语言）
+### 4. 设置自动多语言（跟随系统多语言）
 ```
 LanguageManager.INSTANCE.setAutoLanguage(Context context);
 ```
