@@ -36,7 +36,7 @@
     }
  ```
 
-2.  实现onLanguageChanged， 更新页面语言显示 （在设置语言后，会立即回调该接口）
+2.  需要实现动态切换语言的View，继承LanguageObserver实现onLanguageChanged方法，更新页面语言 （在设置语言后，会立即回调该接口）
 ```
     @Override
     public void onLanguageChanged(Context context) {
@@ -44,27 +44,37 @@
     }
 ```
 # 接口
+
 ### 1. 设置语言: 
 语言码为：An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. See the Locale class description about valid language values.
 ```    
 LanguageManager.INSTANCE.setLanguage(Context context, String language);
 ```
+
 ### 2. 自定义语言码和Locale转换关系（高级）
 ```
 LanguageManager.INSTANCE.setLanguageConverter(LanguageStrLocaleConverter languageConverter)
 ```
+
 ### 3. 获取当前多语言
 ```
 LanguageManager.INSTANCE.getCurrentLanguage(Context context);
 ```
+
 ### 4. 设置自动多语言（跟随系统多语言）
 ```
 LanguageManager.INSTANCE.setAutoLanguage(Context context);
 ```
 
+### 5. 注册多语言实时监听器
+```
+LanguageManager.INSTANCE.registerObserver(LanguageObserver observer);
+```
 
-
-
+### 6. 取消注册多语言实时监听器
+```
+LanguageManager.INSTANCE.unRegisterObserver(LanguageObserver observer);
+```
 
 
 
