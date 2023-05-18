@@ -4,7 +4,8 @@
 特点：
 * 不改变多语言的存放方式，和系统一致 在res下
 * 不设置语言时，自动跟随系统语言
-* 设置语言后，立即动态切换为设置语言
+* 设置语言后，可实现立即动态切换为设置语言，不需要重启应用
+
 
 # 使用方法
  1. 参照demo BaseActivity 继承LanguageObserver，并重写onCreate, attachBaseContext, onConfigurationChanged, onDestroy
