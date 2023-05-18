@@ -1,5 +1,5 @@
 # AndroidLanguageSwitch
-安卓动态切换语言库.....  无缝切换
+安卓动态切换语言库.....  无需应用重启即可生效
 
 特点：
 * 快速：无需应用重启即可生效，设置语言后，可实现立即动态切换为设置语言
@@ -7,6 +7,21 @@
 * 不设置语言时，自动跟随系统语言
 
 # 使用方法
+ 
+ [![](https://jitpack.io/v/tianxiatianshan/AndroidLanguageSwitch.svg)](https://jitpack.io/#tianxiatianshan/AndroidLanguageSwitch)
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+ 
+ 	dependencies {
+	        implementation 'com.github.tianxiatianshan:AndroidLanguageSwitch:1.0.0'
+	}
+```
+
  1. 参照demo BaseActivity 继承LanguageObserver，并重写onCreate, attachBaseContext, onConfigurationChanged, onDestroy
 
 ```
