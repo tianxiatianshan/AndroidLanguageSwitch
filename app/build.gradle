@@ -31,7 +31,7 @@ dependencies {
 
 //    api project(':SwitchLanguage')
 
-    implementation 'com.github.tianxiatianshan:AndroidLanguageSwitch:v0.0.2'
+    implementation 'com.github.tianxiatianshan:AndroidLanguageSwitch:1.0.0'
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
