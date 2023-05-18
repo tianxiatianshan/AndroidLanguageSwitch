@@ -7,6 +7,10 @@
 * 不设置语言时，自动跟随系统语言
 
 # 使用方法
+ 
+ [![](https://jitpack.io/v/tianxiatianshan/AndroidLanguageSwitch.svg)](https://jitpack.io/#tianxiatianshan/AndroidLanguageSwitch)
+
+
  1. 参照demo BaseActivity 继承LanguageObserver，并重写onCreate, attachBaseContext, onConfigurationChanged, onDestroy
 
 ```
