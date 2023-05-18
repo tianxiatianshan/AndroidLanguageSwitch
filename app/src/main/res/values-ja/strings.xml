@@ -1,3 +1,9 @@
 <resources>
-    <string name="hello">hello.ja</string>
+    <string name="account">アカウント</string>
+    <string name="enter_account">アカウントを入力してください。</string>
+    <string name="password">パスワード</string>
+    <string name="enter_password">パスワードを入力してください。</string>
+    <string name="login">ログイン</string>
+
+    <string name="switch_language">言語切り替え</string>
 </resources>

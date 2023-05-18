@@ -1,3 +1,15 @@
 <resources>
-    <string name="hello">hello</string>
+    <string name="account">Account</string>
+    <string name="enter_account">Please enter your account.</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Please enter your password.</string>
+    <string name="login">Login</string>
+    <string name="switch_language">Switch Language</string>
+
+
+    <string translatable="false" name="zh">中文</string>
+    <string translatable="false" name="en">English</string>
+    <string translatable="false" name="ko">한국어</string>
+    <string translatable="false" name="jp">日本語</string>
+
 </resources>
