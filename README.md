@@ -14,16 +14,16 @@
  
  [![](https://jitpack.io/v/tianxiatianshan/AndroidLanguageSwitch.svg)](https://jitpack.io/#tianxiatianshan/AndroidLanguageSwitch)
 ```
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
- 
- 	dependencies {
-	        implementation 'com.github.tianxiatianshan:AndroidLanguageSwitch:1.0.0'
-	}
+    allprojects {
+        repositories {
+        	...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    
+    dependencies {
+        implementation 'com.github.tianxiatianshan:AndroidLanguageSwitch:1.0.0'
+    }
 ```
 
  1. 参照demo BaseActivity 继承LanguageObserver，并重写onCreate, attachBaseContext, onConfigurationChanged, onDestroy
