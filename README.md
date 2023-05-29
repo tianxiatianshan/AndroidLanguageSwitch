@@ -22,7 +22,9 @@
     }
     
     dependencies {
-        implementation 'com.github.tianxiatianshan:AndroidLanguageSwitch:1.0.0'
+        implementation 'com.github.tianxiatianshan.AndroidLanguageSwitch:SwitchLanguage:1.0.1'
+        implementation 'com.github.tianxiatianshan.AndroidLanguageSwitch:SwitchLanguageAnnotation:1.0.1'
+        annotationProcessor 'com.github.tianxiatianshan.AndroidLanguageSwitch:SwitchLanguageCompiler:1.0.1'
     }
 ```
 
@@ -32,7 +34,7 @@
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LanguageManager.INSTANCE.registerObserver(this);
+        LanguageManager.INSTANCE.bind(this);
     }
 
     @Override
@@ -40,27 +42,19 @@
         super.attachBaseContext(LanguageManager.INSTANCE.getLanguageContext(newBase));
     }
 
+ ```
+ 
+ 2. 增加注解实现语言动态切换AutoLanguage, value为多语言定义名（避免动态ID）
+ ```
+    @AutoLanguage("enter_account")
+    EditText userEd;
+    
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        LanguageManager.INSTANCE.onConfigurationChanged(this, this);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        LanguageManager.INSTANCE.unRegisterObserver(this);
-    }
+    @AutoLanguage("login")
+    Button loginBt;
  ```
 
-2.  需要实现动态切换语言的View，继承LanguageObserver实现onLanguageChanged方法，更新页面语言 （在设置语言后，会立即回调该接口）
-```
-    @Override
-    public void onLanguageChanged(Context context) {
-        mTextView.setText(context.getResources().getString(R.string.hello));
-    }
-```
+
 # 接口
 
 ### 1. 设置语言: 
@@ -84,15 +78,6 @@ LanguageManager.INSTANCE.getCurrentLanguage(Context context);
 LanguageManager.INSTANCE.setAutoLanguage(Context context);
 ```
 
-### 5. 注册多语言实时监听器
-```
-LanguageManager.INSTANCE.registerObserver(LanguageObserver observer);
-```
-
-### 6. 取消注册多语言实时监听器
-```
-LanguageManager.INSTANCE.unRegisterObserver(LanguageObserver observer);
-```
 
 
 
