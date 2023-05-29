@@ -48,4 +48,15 @@ public class LanguageUtil {
         }
         return locale;
     }
+
+    public static String getString(Context context, String name) {
+        Resources resources = context.getResources();
+        int strId = resources.getIdentifier(name, "string", context.getPackageName());
+        if (strId <= 0) {
+            LogUtil.e("LanguageUtil",  String.format("don't find %s in string xml", name));
+            return "";
+        } else {
+            return context.getResources().getString(strId);
+        }
+    }
 }

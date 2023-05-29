@@ -13,4 +13,7 @@ public class LogUtil {
     public static void d(String tag, String message) {
         Log.d(LOG_PRE_TAG + tag, message);
     }
+    public static void e(String tag, String message) {
+        Log.e(LOG_PRE_TAG + tag, message);
+    }
 }

@@ -5,5 +5,5 @@ package com.space.hp.language.api;
  * @date: 2019/12/26
  * @description:
  */
-public interface ILanguageManager extends ILifecycle, ILanguageHelper {
+public interface ILanguageManager extends ILifecycle, ILanguageHelper, ILanguageBind{
 }

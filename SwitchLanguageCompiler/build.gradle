@@ -1,0 +1,19 @@
+plugins {
+    id 'java-library'
+}
+
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.tianxiatianshan'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
+    compileOnly 'com.google.auto.service:auto-service:1.0-rc4'
+    implementation 'com.squareup:javapoet:1.10.0'
+    api project(':SwitchLanguageAnnotation')
+
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8

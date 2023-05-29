@@ -1,2 +1,5 @@
-include ':app', ':SwitchLanguage'
 rootProject.name='AndroidLanguageSwitch'
+include ':app', ':SwitchLanguage'
+
+include ':SwitchLanguageCompiler'
+include ':SwitchLanguageAnnotation'

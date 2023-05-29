@@ -28,6 +28,12 @@ public class LanguageHelperImp implements ILanguageHelper {
         LanguageObserverManager.getInstance().addObserver(observer);
     }
 
+
+    @Override
+    public void registerObserver(Object ob, LanguageObserver observer) {
+        LanguageObserverManager.getInstance().addObserver(ob, observer);
+    }
+
     @Override
     public void unRegisterObserver(LanguageObserver observer) {
         LanguageObserverManager.getInstance().removeObserver(observer);

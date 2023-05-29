@@ -13,6 +13,8 @@ public interface ILanguageHelper {
 
     void registerObserver(LanguageObserver observer);
 
+    void registerObserver(Object object, LanguageObserver observer);
+
     void unRegisterObserver(LanguageObserver observer);
 
     void setLanguage(Context context, String language);

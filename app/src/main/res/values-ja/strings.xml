@@ -1,7 +1,5 @@
 <resources>
-    <string name="account">アカウント</string>
     <string name="enter_account">アカウントを入力してください。</string>
-    <string name="password">パスワード</string>
     <string name="enter_password">パスワードを入力してください。</string>
     <string name="login">ログイン</string>
 
